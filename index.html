@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Effects Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Video Effects Studio</h1>
+
+        <div class="upload-section">
+            <label for="videoUpload" class="upload-button">Upload Video</label>
+            <input type="file" id="videoUpload" accept="video/*">
+        </div>
+
+        <div class="video-player-section">
+            <video id="videoPlayer" controls width="600"></video>
+            <canvas id="canvas" width="600" height="400" style="display: none;"></canvas>
+        </div>
+
+        <div class="effects-controls">
+            <h2>Effects Controls</h2>
+            <div class="effect-option">
+                <label for="wave-intensity">Wave Intensity:</label>
+                <input type="range" id="wave-intensity" min="0" max="100" value="0">
+            </div>
+            <div class="effect-option">
+                <label for="swirl-radius">Swirl Radius:</label>
+                <input type="range" id="swirl-radius" min="0" max="100" value="0">
+            </div>
+            <!-- Add more effect controls as needed -->
+        </div>
+
+        <div class="export-section">
+            <button id="exportVideo">Export Video</button>
+            <a id="downloadLink" style="display: none;">Download</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
